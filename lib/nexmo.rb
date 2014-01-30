@@ -23,6 +23,10 @@ module Nexmo
 
     attr_accessor :key, :secret, :http, :oauth_access_token
 
+    def send_US_short_code(params)
+      post('/sc/us/2fa/json', params)
+    end
+
     def send_message(params)
       post('/sms/json', params)
     end
